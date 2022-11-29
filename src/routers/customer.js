@@ -1,8 +1,7 @@
 const express =require ('express');
 const router =express.Router();
 
-router.get('/',(req,res )=>{
-    res,send("Hola Didi,I love you pene")
-});
+const customerController= require('../controllers/customerControllers')
 
+router.get('/', customerController.list);
 module.exports=router;
